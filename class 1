@@ -1,0 +1,40 @@
+import seaborn as sns
+
+data= sns.load_dataset("titanic")
+data
+
+import matplotlib.pyplot as plt
+sns.barplot(x="who",y="fare",data=data)
+plt.show()
+
+import seaborn as sns
+
+data=sns.load_dataset("titanic")
+data
+
+import matplotlib.pyplot as plt
+sns.barplot(x="class",y="age",data=data)
+plt.show()
+
+sns.distplot(data["age"])
+plt.show()
+
+sns.distplot(data["fare"])
+plt.show()
+
+import pandas as pd
+x=[1,2,3,4,5,6,7,8]
+y=[1,4,9,16,25,36,49,64]
+df=pd.DataFrame({"x":x,"y":y})
+sns.jointplot(data=df,x="x",y="y")
+plt.show()
+
+df=pd.read_excel(r"/content/Weather Dataset.xlsx")
+df
+
+import matplotlib.pyplot as plt
+
+sns.barplot(x="weather_type",y="wind_speed",data=df)
+plt.show()
+
+

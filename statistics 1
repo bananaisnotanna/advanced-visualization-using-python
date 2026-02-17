@@ -1,0 +1,22 @@
+import seaborn as sns
+import pandas as pd
+import statistics, numpy as np
+data=pd.read_csv(r"/content/Titanic Dataset.csv")
+
+data.head()
+
+median_age=np.median(data['Age'])
+median_age
+
+median_fare=np.median(data['Fare'])
+median_fare
+
+
+mode_age=statistics.mode(data['Age'])
+mode_age
+
+mode_class=statistics.mode(data['Pclass'])
+mode_class
+
+mode_gender=data['Gender'].value_counts().index[0]
+mode_gender
